@@ -40,6 +40,7 @@ export const GlobalStyle = createGlobalStyle<{ font: string }>`
     bottom: 1px;
     width: 100%;
     text-align: center;
+    color: ${({ theme }) => theme.textMain};
 
     @media ${MEDIA_SIZES.desktop} {
       font-size: 1.4rem;
