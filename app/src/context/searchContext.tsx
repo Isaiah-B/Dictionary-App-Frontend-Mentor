@@ -102,7 +102,7 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
     // Reset results to prevent incorrect information from displaying
     setResults([]);
 
-    // Set items as a valid array of results, an empty array, or an error object
+    // Set results as a valid array of results, an empty array, or an error object
     if (Array.isArray(apiResult)) {
       const transformedResults: ResultItem[] = apiResult.map((result) => transformResults(result));
       setResults(transformedResults);
