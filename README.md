@@ -31,6 +31,7 @@ Users should be able to:
 
 - React w/ Typescript
 - React Context
+- [Axios](https://axios-http.com)
 - CSS Styled Components
 - Flexbox
 - Desktop-first workflow
