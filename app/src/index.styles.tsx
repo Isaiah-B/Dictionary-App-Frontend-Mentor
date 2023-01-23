@@ -40,6 +40,10 @@ export const GlobalStyle = createGlobalStyle<{ font: string }>`
     bottom: 1px;
     width: 100%;
     text-align: center;
+
+    @media ${MEDIA_SIZES.desktop} {
+      font-size: 1.4rem;
+    }
   }
 
   h1 {

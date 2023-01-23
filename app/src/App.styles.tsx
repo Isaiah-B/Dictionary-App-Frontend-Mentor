@@ -5,7 +5,7 @@ import { MEDIA_SIZES } from './index.styles';
 
 export const Container = styled.div`
   width: 73.7rem;
-  margin: 0 auto 12.4rem;
+  margin: 0 auto 7.4rem;
   height: 100%;
   
   @media ${MEDIA_SIZES.tablet} {

@@ -24,8 +24,10 @@ function App() {
         <GlobalStyle font={appFont} />
         <Container>
           <Header />
-          <Searchbar />
-          <ResultArea />
+          <main>
+            <Searchbar />
+            <ResultArea />
+          </main>
         </Container>
       </SearchProvider>
     </ThemeProvider>
