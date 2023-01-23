@@ -46,7 +46,10 @@ function Header() {
 
       <HeaderActions>
         <FontMenuContainer>
-          <FontMenuButton onClick={() => setMenuOpen(!menuOpen)}>
+          <FontMenuButton
+            aria-label="select font"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <p>{formatFontName(font)}</p>
             <ArrowDown />
           </FontMenuButton>
@@ -81,7 +84,10 @@ function Header() {
         </FontMenuContainer>
 
         <ThemeContainer className={theme === 'dark-theme' ? 'dark' : ''}>
-          <ThemeSwitch onClick={() => toggleTheme()} />
+          <ThemeSwitch
+            aria-label="toggle theme"
+            onClick={() => toggleTheme()}
+          />
           <MoonIcon />
         </ThemeContainer>
 

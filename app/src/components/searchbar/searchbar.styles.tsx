@@ -47,7 +47,7 @@ export const SearchIcon = styled(SearchSVG)`
     right: 6%;
   }
 
-  @media ${MEDIA_SIZES.widescreen} {
+  @media ${MEDIA_SIZES.desktop} {
     transform: translateY(-50%) scale(1.4);
   }
 `;

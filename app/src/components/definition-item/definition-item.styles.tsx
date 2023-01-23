@@ -30,10 +30,10 @@ export const DefinitionHeaderLeft = styled.div`
   
   h1 {
     display: inline;
-    margin-right: 2rem;
+    margin-right: 1.4rem;
 
     @media ${MEDIA_SIZES.mobile} {
-      margin-right: 1.2rem;
+      margin-right: 1rem;
     }
   }
 `;
@@ -43,7 +43,7 @@ export const DefinitionIndex = styled.span`
   font-size: 1.8rem;
 
   @media ${MEDIA_SIZES.mobile} {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -71,7 +71,7 @@ export const AudioButton = styled.button`
     transform: scale(0.64);
   }
 
-  @media ${MEDIA_SIZES.widescreen} {
+  @media ${MEDIA_SIZES.desktop} {
     transform: scale(1.3);
   }
 `;

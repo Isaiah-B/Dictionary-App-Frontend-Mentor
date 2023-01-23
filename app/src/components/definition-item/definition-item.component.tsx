@@ -37,7 +37,7 @@ function DefinitionItem({ item, index }: { item: ResultItem, index: string | nul
           <DefinitionPhonetic>{phonetic}</DefinitionPhonetic>
         </DefinitionHeaderLeft>
 
-        <AudioButton onClick={playAudio}>
+        <AudioButton aria-label="listen to word" onClick={playAudio}>
           <PlayIcon />
         </AudioButton>
         {

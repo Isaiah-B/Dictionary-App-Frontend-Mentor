@@ -7,6 +7,12 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 5.8rem 0 5.2rem;
+
+  @media ${MEDIA_SIZES.mobile} {
+    padding: 2.8rem 2.4rem;
+  }
 `;
 
 export const HeaderActions = styled.div`

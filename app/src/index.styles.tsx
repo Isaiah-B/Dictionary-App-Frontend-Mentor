@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const MEDIA_SIZES = {
-  widescreen: '(min-width: 90em)',
+  desktop: '(min-width: 90.1em)',
   tablet: '(max-width: 49em)',
   mobile: '(max-width: 27em)',
 };
@@ -16,8 +16,10 @@ export const GlobalStyle = createGlobalStyle<{ font: string }>`
   html {
     font-size: 62.5%;
     line-height: 1;
+    
+    height: 100%;
 
-    @media ${MEDIA_SIZES.widescreen} {
+    @media ${MEDIA_SIZES.desktop} {
       font-size: 75%;
     }
   }
@@ -27,7 +29,17 @@ export const GlobalStyle = createGlobalStyle<{ font: string }>`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    position: relative;
+    padding-bottom: 1px;
+    min-height: 100%;
     background-color: ${({ theme }) => theme.backgroundMain};
+  }
+
+  footer {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
   }
 
   h1 {
