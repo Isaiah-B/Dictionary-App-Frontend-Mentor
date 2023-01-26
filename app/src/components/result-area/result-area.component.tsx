@@ -6,8 +6,8 @@ import { ReactComponent as NewWindowIcon } from '../../assets/images/icon-new-wi
 import { ResultItem, searchContext } from '../../context/searchContext';
 
 import {
+  ErrorContainer,
   LoadingText,
-  NotFoundContainer,
   ResultAreaContainer,
   SourceSection,
 } from './result-area.styles';
@@ -46,18 +46,28 @@ function ValidResult({ results }: { results: ResultItem[] }) {
 
 function NotFound() {
   return (
-    <NotFoundContainer>
+    <ErrorContainer>
       <span>😕</span>
       <h3>No Definitions Found</h3>
       <p>
         Sorry pal, we couldn&apos;t find definitions for the word you were looking for.
         You can try the search again at later time or head to the web instead.
       </p>
-    </NotFoundContainer>
-
+    </ErrorContainer>
   );
 }
 
+function NoData() {
+  return (
+    <ErrorContainer>
+      <span>😟</span>
+      <h3>Data is not availabe</h3>
+      <p>
+        Uh oh! It looks like the Free Dictionary API is experiencing some issues! Try again later.
+      </p>
+    </ErrorContainer>
+  );
+}
 function ResultArea() {
   const { results, loading } = useContext(searchContext);
   const [showLoader, setShowLoader] = useState(false);
@@ -82,9 +92,15 @@ function ResultArea() {
     );
   }
 
-  if (results.error) {
+  if (results.error === 404) {
     return (
       <NotFound />
+    );
+  }
+
+  if (results.error === 500) {
+    return (
+      <NoData />
     );
   }
 

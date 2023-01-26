@@ -38,7 +38,7 @@ export const SourceSection = styled.div`
   }
 `;
 
-export const NotFoundContainer = styled.div`
+export const ErrorContainer = styled.div`
   text-align: center;
   margin-top: 13.2rem;
   
